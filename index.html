@@ -17,7 +17,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* TEMEL STİLLER */
+        /* TEMEL STİLLER - YENİ RENK PALETİ */
+        :root {
+            --primary-dark: #0B3B5C;       /* Koyu lacivert - güven ve profesyonellik */
+            --primary-medium: #1E5A7C;     /* Orta lacivert - ana renk */
+            --primary-light: #E8F0F7;      /* Açık mavi - arka planlar */
+            --accent-blue: #3498DB;         /* Parlak mavi - butonlar ve vurgular */
+            --accent-orange: #F39C12;       /* Turuncu - aksan ve CTA */
+            --accent-orange-dark: #E67E22;  /* Koyu turuncu - hover */
+            --text-dark: #2C3E50;           /* Koyu gri - yazılar */
+            --text-light: #ECF0F1;          /* Açık gri - ters yazılar */
+            --bg-light: #F8FAFC;            /* Çok açık gri - genel arka plan */
+            --white: #FFFFFF;
+            --gray-light: #E5E9F0;
+            --gray-medium: #95A5A6;
+            --success: #27AE60;              /* Yeşil - başarı */
+            --warning: #F39C12;               /* Turuncu - uyarı */
+            --shadow-sm: 0 4px 12px rgba(11, 59, 92, 0.08);
+            --shadow-md: 0 8px 20px rgba(11, 59, 92, 0.12);
+            --shadow-lg: 0 15px 30px rgba(11, 59, 92, 0.15);
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -37,11 +57,11 @@
         
         body {
             font-family: 'Roboto', sans-serif;
-            color: #333;
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
             width: 100%;
-            background-color: #f4f7fc;
+            background-color: var(--bg-light);
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -73,8 +93,8 @@
         
         .btn {
             display: inline-block;
-            background-color: #1e4a8b;
-            color: white;
+            background-color: var(--accent-blue);
+            color: var(--white);
             padding: 12px 28px;
             border-radius: 50px;
             font-weight: 600;
@@ -82,32 +102,32 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-sm);
         }
         
         .btn:hover {
-            background-color: #0f2c4f;
+            background-color: var(--primary-medium);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-accent {
-            background-color: #e6b15c;
+            background-color: var(--accent-orange);
         }
         
         .btn-accent:hover {
-            background-color: #cf9b45;
+            background-color: var(--accent-orange-dark);
         }
         
         .btn-outline {
-            background-color: white;
-            color: #1e4a8b;
-            border: 2px solid #1e4a8b;
+            background-color: transparent;
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
         }
         
         .btn-outline:hover {
-            background-color: #1e4a8b;
-            color: white;
+            background-color: var(--accent-blue);
+            color: var(--white);
         }
         
         .section-title {
@@ -118,7 +138,7 @@
         
         .section-title h2 {
             font-size: 36px;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
@@ -129,7 +149,7 @@
             position: absolute;
             width: 60px;
             height: 3px;
-            background-color: #e6b15c;
+            background-color: var(--accent-orange);
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -137,8 +157,8 @@
         
         /* HEADER */
         header {
-            background-color: white;
-            box-shadow: 0 2px 20px rgba(0, 40, 80, 0.1);
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -164,19 +184,19 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 24px;
-            color: #1e4a8b;
+            color: var(--primary-dark);
         }
         
         .logo-text span {
-            color: #e6b15c;
+            color: var(--accent-orange);
             font-weight: 400;
         }
         
         .header-phone-button {
             display: flex;
             align-items: center;
-            background-color: white;
-            color: #1e4a8b;
+            background-color: var(--white);
+            color: var(--accent-blue);
             padding: 10px 20px;
             border-radius: 50px;
             font-weight: 600;
@@ -184,12 +204,12 @@
             white-space: nowrap;
             transition: all 0.3s ease;
             margin-left: 20px;
-            border: 2px solid #1e4a8b;
+            border: 2px solid var(--accent-blue);
         }
         
         .header-phone-button:hover {
-            background-color: #1e4a8b;
-            color: white;
+            background-color: var(--accent-blue);
+            color: var(--white);
             transform: translateY(-2px);
         }
         
@@ -212,13 +232,13 @@
         .main-nav a {
             font-weight: 500;
             font-size: 16px;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             padding: 5px 0;
             position: relative;
         }
         
         .main-nav a:hover, .main-nav a.active {
-            color: #1e4a8b;
+            color: var(--accent-blue);
             font-weight: 600;
         }
         
@@ -227,7 +247,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background-color: #e6b15c;
+            background-color: var(--accent-orange);
             bottom: 0;
             left: 0;
             transition: width 0.3s ease;
@@ -243,15 +263,15 @@
         
         .dropdown-content {
             position: absolute;
-            background-color: white;
+            background-color: var(--white);
             min-width: 220px;
-            box-shadow: 0 8px 16px rgba(0, 40, 80, 0.15);
+            box-shadow: var(--shadow-md);
             z-index: 1;
             opacity: 0;
             visibility: hidden;
             transform: translateY(10px);
             transition: all 0.3s ease;
-            border-top: 3px solid #e6b15c;
+            border-top: 3px solid var(--accent-orange);
         }
         
         .dropdown:hover .dropdown-content {
@@ -263,30 +283,31 @@
         .dropdown-content a {
             display: block;
             padding: 12px 20px;
-            border-bottom: 1px solid #f1f1f1;
+            border-bottom: 1px solid var(--gray-light);
+            color: var(--primary-dark);
         }
         
         .dropdown-content a:hover {
-            background-color: #f0f7ff;
+            background-color: var(--primary-light);
             padding-left: 25px;
-            color: #1e4a8b;
+            color: var(--accent-blue);
         }
         
         .mobile-menu-btn {
             display: none;
             font-size: 24px;
             cursor: pointer;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             order: 2;
         }
         
         /* HERO BÖLÜMÜ */
         .hero {
             position: relative;
-            height: 100vh;
             min-height: 700px;
+            height: 100vh;
             overflow: hidden;
-            color: white;
+            color: var(--white);
             text-align: center;
             width: 100%;
         }
@@ -321,7 +342,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(30, 74, 139, 0.75);
+            background: linear-gradient(135deg, rgba(11, 59, 92, 0.9) 0%, rgba(30, 90, 124, 0.85) 100%);
         }
         
         .hero-content {
@@ -342,8 +363,8 @@
             font-size: 48px;
             margin-bottom: 20px;
             font-weight: 700;
-            color: white !important;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: var(--white) !important;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             letter-spacing: 1px;
         }
         
@@ -351,20 +372,20 @@
             font-size: 28px;
             margin-bottom: 25px;
             font-weight: 400;
-            color: #e6b15c;
+            color: var(--accent-orange);
         }
         
         .hero p {
             font-size: 18px;
             margin-bottom: 35px;
-            opacity: 0.9;
+            opacity: 0.95;
             max-width: 700px;
         }
         
         .hero-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);
-            color: #e6b15c;
+            color: var(--accent-orange);
             padding: 8px 20px;
             border-radius: 40px;
             font-weight: 600;
@@ -377,24 +398,22 @@
         .call-button-hero {
             display: inline-flex;
             align-items: center;
-            background-color: white;
-            color: #1e4a8b;
+            background-color: var(--accent-orange);
+            color: var(--white);
             padding: 14px 28px;
             border-radius: 50px;
             font-weight: 700;
             font-size: 18px;
             white-space: nowrap;
             transition: all 0.3s ease;
-            margin-top: 20px;
-            border: 2px solid white;
+            border: 2px solid var(--accent-orange);
         }
         
         .call-button-hero:hover {
-            background-color: #1e4a8b;
-            color: white;
-            border-color: #1e4a8b;
+            background-color: var(--accent-orange-dark);
+            border-color: var(--accent-orange-dark);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-lg);
         }
         
         .call-button-hero i {
@@ -405,21 +424,22 @@
             display: inline-flex;
             align-items: center;
             background-color: #25D366;
-            color: white;
+            color: var(--white);
             padding: 14px 28px;
             border-radius: 50px;
             font-weight: 600;
             font-size: 18px;
             white-space: nowrap;
             transition: all 0.3s ease;
-            margin-top: 15px;
             margin-left: 15px;
+            border: 2px solid #25D366;
         }
         
         .whatsapp-button-hero:hover {
             background-color: #128C7E;
+            border-color: #128C7E;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-lg);
         }
         
         .whatsapp-button-hero i {
@@ -439,13 +459,13 @@
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: #e6b15c;
+            color: var(--accent-orange);
             line-height: 1;
         }
         
         .stat-label {
             font-size: 0.9rem;
-            color: white;
+            color: var(--white);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             opacity: 0.9;
@@ -476,13 +496,13 @@
         }
         
         .slider-dot.active {
-            background-color: #e6b15c;
+            background-color: var(--accent-orange);
             transform: scale(1.2);
         }
         
         /* HİZMETLER BÖLÜMÜ */
         .services {
-            background-color: #f4f7fc;
+            background-color: var(--bg-light);
             width: 100%;
         }
         
@@ -494,16 +514,20 @@
         }
         
         .service-card {
-            background-color: white;
+            background-color: var(--white);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(30, 74, 139, 0.1);
+            box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
             position: relative;
             height: 350px;
             cursor: pointer;
             perspective: 1000px;
             width: 100%;
+        }
+        
+        .service-card:hover {
+            box-shadow: var(--shadow-md);
         }
         
         .service-card-inner {
@@ -545,7 +569,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to bottom, rgba(30,74,139,0.3) 0%, rgba(30,74,139,0.85) 100%);
+            background: linear-gradient(to bottom, rgba(11,59,92,0.4) 0%, rgba(11,59,92,0.9) 100%);
             z-index: 1;
         }
         
@@ -561,7 +585,7 @@
         
         .service-icon {
             font-size: 40px;
-            color: white !important;
+            color: var(--accent-orange) !important;
             margin-bottom: 20px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
@@ -570,7 +594,7 @@
             font-size: 22px;
             margin-bottom: 15px;
             text-align: center;
-            color: white !important;
+            color: var(--white) !important;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
             width: 100%;
         }
@@ -580,14 +604,14 @@
             text-align: center;
             font-size: 15px;
             line-height: 1.5;
-            color: white !important;
+            color: var(--white) !important;
             text-shadow: 0 1px 2px rgba(0,0,0,0.5);
             width: 100%;
         }
         
         .service-card-back {
-            background-color: #1e4a8b;
-            color: white;
+            background-color: var(--primary-dark);
+            color: var(--white);
             transform: rotateY(180deg);
             display: flex;
             flex-direction: column;
@@ -603,7 +627,7 @@
         }
         
         .service-card-back h3 {
-            color: #e6b15c;
+            color: var(--accent-orange);
             margin-bottom: 15px;
             font-size: 20px;
             font-weight: 700;
@@ -635,7 +659,7 @@
         }
         
         .product-features::-webkit-scrollbar-thumb {
-            background: rgba(230, 177, 92, 0.5);
+            background: var(--accent-orange);
             border-radius: 2px;
         }
         
@@ -651,7 +675,7 @@
             margin-bottom: 8px;
             font-size: 14px;
             line-height: 1.4;
-            color: white;
+            color: var(--white);
             opacity: 0.95;
             display: flex;
             align-items: flex-start;
@@ -659,7 +683,7 @@
         }
         
         .product-features i {
-            color: #e6b15c;
+            color: var(--accent-orange);
             margin-right: 8px;
             font-size: 14px;
             flex-shrink: 0;
@@ -668,12 +692,12 @@
         }
         
         .service-card-back .btn {
-            background-color: white;
-            color: #1e4a8b;
+            background-color: var(--white);
+            color: var(--primary-dark);
             font-weight: 700;
             padding: 10px 20px;
             font-size: 15px;
-            border: 2px solid white;
+            border: 2px solid var(--white);
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -681,26 +705,26 @@
             display: inline-block;
             text-decoration: none;
             min-width: 140px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-sm);
             text-align: center;
             margin-top: 5px;
             white-space: nowrap;
         }
         
         .service-card-back .btn:hover {
-            background-color: #1e4a8b;
-            color: white;
-            border-color: #e6b15c;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            border-color: var(--accent-orange);
             transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            box-shadow: var(--shadow-md);
         }
         
         .flip-indicator {
             position: absolute;
             top: 15px;
             right: 15px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #1e4a8b;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-dark);
             padding: 5px 10px;
             border-radius: 50px;
             font-size: 12px;
@@ -714,7 +738,8 @@
         }
         
         .flip-indicator:hover {
-            background: white;
+            background: var(--accent-orange);
+            color: var(--white);
             transform: scale(1.05);
         }
         
@@ -724,10 +749,10 @@
         
         /* BÖLGELER BÖLÜMÜ */
         .regions-section {
-            background-color: white;
+            background-color: var(--white);
             border-radius: 12px;
             padding: 60px;
-            box-shadow: 0 15px 40px rgba(30, 74, 139, 0.1);
+            box-shadow: var(--shadow-md);
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -741,8 +766,8 @@
         }
         
         .region-tag {
-            background: #e6f0ff;
-            color: #1e4a8b;
+            background: var(--primary-light);
+            color: var(--primary-dark);
             padding: 12px 30px;
             border-radius: 40px;
             font-weight: 600;
@@ -752,20 +777,20 @@
         }
         
         .region-tag:hover {
-            background: #1e4a8b;
-            color: white;
+            background: var(--accent-blue);
+            color: var(--white);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(30,74,139,0.3);
+            box-shadow: var(--shadow-sm);
         }
         
         .region-tag.region-highlight {
-            background: #1e4a8b;
-            color: white;
+            background: var(--primary-dark);
+            color: var(--white);
         }
         
         .region-highlight:hover {
-            background: #e6b15c;
-            color: #1e4a8b;
+            background: var(--accent-orange);
+            color: var(--white);
         }
         
         /* HAKKIMIZDA BÖLÜMÜ */
@@ -785,7 +810,7 @@
         .about-img img {
             width: 100%;
             border-radius: 12px;
-            box-shadow: 0 15px 30px rgba(30, 74, 139, 0.2);
+            box-shadow: var(--shadow-lg);
             height: auto;
         }
         
@@ -793,8 +818,8 @@
             position: absolute;
             bottom: -20px;
             right: -20px;
-            background-color: #e6b15c;
-            color: #1e4a8b;
+            background-color: var(--accent-orange);
+            color: var(--white);
             width: 140px;
             height: 140px;
             border-radius: 50%;
@@ -803,7 +828,7 @@
             justify-content: center;
             align-items: center;
             font-weight: 700;
-            box-shadow: 0 5px 15px rgba(230,177,92,0.3);
+            box-shadow: var(--shadow-md);
         }
         
         .about-badge span:first-child {
@@ -818,13 +843,13 @@
         .about-content h3 {
             font-size: 32px;
             margin-bottom: 20px;
-            color: #1e4a8b;
+            color: var(--primary-dark);
         }
         
         .about-content p {
             margin-bottom: 20px;
             font-size: 16px;
-            color: #555;
+            color: var(--text-dark);
         }
         
         .features-list li {
@@ -834,7 +859,7 @@
         }
         
         .features-list i {
-            color: #e6b15c;
+            color: var(--accent-orange);
             margin-right: 10px;
             margin-top: 5px;
             font-size: 18px;
@@ -842,10 +867,10 @@
         
         /* GÜVEN UNSURLARI */
         .trust-bar {
-            background: white;
+            background: var(--white);
             padding: 40px 0;
             width: 100%;
-            border-bottom: 1px solid rgba(30, 74, 139, 0.1);
+            border-bottom: 1px solid var(--gray-light);
         }
         
         .trust-grid {
@@ -860,13 +885,13 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             font-weight: 600;
             font-size: 1.1rem;
         }
         
         .trust-item i {
-            color: #e6b15c;
+            color: var(--accent-orange);
             font-size: 28px;
         }
         
@@ -879,19 +904,25 @@
         }
         
         .review-card {
-            background: white;
+            background: var(--white);
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 10px 25px rgba(30, 74, 139, 0.08);
-            border: 1px solid rgba(30, 74, 139, 0.1);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
             display: flex;
             flex-direction: column;
             height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .review-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
         }
         
         .review-text {
             font-size: 1.1rem;
-            color: #333;
+            color: var(--text-dark);
             margin-bottom: 24px;
             line-height: 1.6;
             font-style: italic;
@@ -902,7 +933,7 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            border-top: 1px solid rgba(30, 74, 139, 0.1);
+            border-top: 1px solid var(--gray-light);
             padding-top: 24px;
             margin-top: auto;
         }
@@ -910,33 +941,33 @@
         .author-avatar {
             width: 52px;
             height: 52px;
-            background: #e6f0ff;
+            background: var(--primary-light);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             font-weight: 700;
             font-size: 1.2rem;
             flex-shrink: 0;
-            border: 2px solid #e6b15c;
+            border: 2px solid var(--accent-orange);
         }
         
         .author-info h4 {
             font-size: 1rem;
             margin-bottom: 4px;
-            color: #1e4a8b;
+            color: var(--primary-dark);
         }
         
         .author-info p {
             font-size: 0.85rem;
-            color: #888;
+            color: var(--gray-medium);
             margin: 0;
         }
         
         /* FAQ BÖLÜMÜ */
         .faq-section {
-            background-color: white;
+            background-color: var(--white);
             padding: 80px 0;
             width: 100%;
         }
@@ -951,12 +982,12 @@
             margin-bottom: 15px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(30, 74, 139, 0.1);
+            box-shadow: var(--shadow-sm);
             width: 100%;
         }
         
         .faq-question {
-            background-color: white;
+            background-color: var(--white);
             padding: 20px;
             cursor: pointer;
             display: flex;
@@ -966,36 +997,36 @@
             font-size: 18px;
             transition: all 0.3s ease;
             width: 100%;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             border-left: 4px solid transparent;
         }
         
         .faq-question:hover {
-            background-color: #f0f7ff;
-            border-left-color: #e6b15c;
+            background-color: var(--primary-light);
+            border-left-color: var(--accent-orange);
         }
         
         .faq-question.active {
-            background-color: #1e4a8b;
-            color: white;
-            border-left-color: #e6b15c;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            border-left-color: var(--accent-orange);
         }
         
         .faq-question i {
             transition: transform 0.3s ease;
-            color: #e6b15c;
+            color: var(--accent-orange);
         }
         
         .faq-question.active i {
             transform: rotate(180deg);
-            color: white;
+            color: var(--white);
         }
         
         .faq-answer {
             padding: 0;
             max-height: 0;
             overflow: hidden;
-            background-color: white;
+            background-color: var(--white);
             transition: all 0.3s ease;
             width: 100%;
         }
@@ -1007,25 +1038,25 @@
         
         .faq-answer p {
             margin-bottom: 0;
-            color: #666;
+            color: var(--text-dark);
         }
         
         /* İLETİŞİM BÖLÜMÜ */
         .contact-section {
-            background: white;
+            background: var(--white);
             border-radius: 12px;
             padding: 60px;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
-            box-shadow: 0 15px 40px rgba(30, 74, 139, 0.1);
-            border: 1px solid rgba(30, 74, 139, 0.1);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-light);
         }
         
         .contact-phone {
             font-size: 3rem;
             font-weight: 700;
-            color: #1e4a8b;
+            color: var(--primary-dark);
             text-decoration: none;
             display: inline-block;
             margin: 30px 0;
@@ -1034,7 +1065,7 @@
         }
         
         .contact-phone:hover {
-            color: #e6b15c;
+            color: var(--accent-orange);
             transform: scale(1.02);
         }
         
@@ -1048,8 +1079,8 @@
         
         /* FOOTER */
         footer {
-            background-color: #1e4a8b;
-            color: #ddd;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
             padding-top: 80px;
             width: 100%;
         }
@@ -1064,12 +1095,12 @@
         
         .footer-logo h3 {
             font-size: 24px;
-            color: white;
+            color: var(--white);
             margin-bottom: 15px;
         }
         
         .footer-logo h3 span {
-            color: #e6b15c;
+            color: var(--accent-orange);
             font-weight: 400;
         }
         
@@ -1080,7 +1111,7 @@
         }
         
         .footer-title {
-            color: white;
+            color: var(--white);
             font-size: 20px;
             margin-bottom: 25px;
             position: relative;
@@ -1092,7 +1123,7 @@
             position: absolute;
             width: 40px;
             height: 2px;
-            background-color: #e6b15c;
+            background-color: var(--accent-orange);
             bottom: 0;
             left: 0;
         }
@@ -1107,7 +1138,7 @@
         }
         
         .footer-links a:hover {
-            color: #e6b15c;
+            color: var(--accent-orange);
             padding-left: 5px;
         }
         
@@ -1119,7 +1150,7 @@
         }
         
         .contact-info-footer i {
-            color: #e6b15c;
+            color: var(--accent-orange);
             margin-right: 15px;
             font-size: 18px;
             margin-top: 3px;
@@ -1139,13 +1170,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             transition: all 0.3s ease;
         }
         
         .social-icon:hover {
-            background-color: #e6b15c;
-            color: #1e4a8b;
+            background-color: var(--accent-orange);
+            color: var(--primary-dark);
             transform: translateY(-3px);
         }
         
@@ -1177,16 +1208,15 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
-            background-color: #1e4a8b;
+            background-color: var(--accent-blue);
         }
         
         .call-btn:hover {
             transform: scale(1.1);
-            background-color: #e6b15c;
-            color: #1e4a8b;
+            background-color: var(--accent-orange);
         }
         
         .whatsapp-btn {
@@ -1197,8 +1227,8 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
             background-color: #25D366;
         }
@@ -1210,8 +1240,8 @@
         
         /* ACİL BANNER */
         .emergency-banner {
-            background-color: #e6b15c;
-            color: white;
+            background-color: var(--accent-orange);
+            color: var(--white);
             text-align: center;
             padding: 10px;
             font-weight: 700;
@@ -1220,7 +1250,7 @@
         }
         
         .emergency-banner i {
-            color: white;
+            color: var(--white);
             margin: 0 8px;
         }
         
@@ -1276,8 +1306,8 @@
                 right: -100%;
                 width: 280px;
                 height: 100vh;
-                background-color: white;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                background-color: var(--white);
+                box-shadow: var(--shadow-lg);
                 padding: 80px 30px 30px;
                 transition: right 0.4s ease;
                 z-index: 1001;
@@ -1296,7 +1326,7 @@
             }
             
             .main-nav li {
-                border-bottom: 1px solid #f1f1f1;
+                border-bottom: 1px solid var(--gray-light);
                 width: 100%;
             }
             
@@ -1304,6 +1334,7 @@
                 display: block;
                 padding: 15px 0;
                 width: 100%;
+                color: var(--primary-dark);
             }
             
             .dropdown-content {
@@ -1316,10 +1347,15 @@
                 padding-left: 20px;
                 display: none;
                 width: 100%;
+                background-color: var(--primary-light);
             }
             
             .dropdown.active .dropdown-content {
                 display: block;
+            }
+            
+            .dropdown-content a {
+                color: var(--primary-dark);
             }
             
             .hero {
@@ -1494,12 +1530,12 @@
     <header>
         <div class="container">
             <div class="header-container">
-                <!-- Logo Alanı -->
-                <div class="logo-container">
+                <!-- Logo Alanı - Anasayfa linki eklendi -->
+                <a href="https://www.uzmanservisci.com/" class="logo-container">
                     <div class="logo-text">
                         Uzman <span>Servisci</span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Menü barında telefon butonu -->
                 <a href="tel:+905339309689" class="header-phone-button">
@@ -1840,7 +1876,7 @@
                 <div class="section-title">
                     <h2>Hizmet Bölgelerimiz</h2>
                 </div>
-                <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #666;">Anadolu Yakası'nda 8 ilçede aynı gün servis garantisi ile hizmetinizdeyiz.</p>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: var(--text-dark);">Anadolu Yakası'nda 8 ilçede aynı gün servis garantisi ile hizmetinizdeyiz.</p>
                 
                 <div class="region-tags">
                     <span class="region-tag region-highlight">Sancaktepe</span>
@@ -1853,9 +1889,9 @@
                     <span class="region-tag region-highlight">Ümraniye</span>
                 </div>
 
-                <div style="background: #f0f7ff; border-radius: 8px; padding: 30px; margin-top: 30px;">
-                    <h3 style="color: #1e4a8b; margin-bottom: 15px; text-align: center;">📍 Tüm ilçelerde profesyonel hizmet</h3>
-                    <p style="text-align: center; margin-bottom: 0;"><strong>Sancaktepe, Pendik, Kartal, Çekmeköy, Tuzla, Ataşehir, Sultanbeyli ve Ümraniye</strong> sınırları içerisinde ikamet eden müşterilerimize öncelikli servis avantajı sunuyoruz. Bölgenizdeki en deneyimli teknik ekip ile çalışır, tüm beyaz eşya markalarına müdahale ederiz.</p>
+                <div style="background: var(--primary-light); border-radius: 8px; padding: 30px; margin-top: 30px;">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 15px; text-align: center;">📍 Tüm ilçelerde profesyonel hizmet</h3>
+                    <p style="text-align: center; margin-bottom: 0; color: var(--text-dark);"><strong>Sancaktepe, Pendik, Kartal, Çekmeköy, Tuzla, Ataşehir, Sultanbeyli ve Ümraniye</strong> sınırları içerisinde ikamet eden müşterilerimize öncelikli servis avantajı sunuyoruz. Bölgenizdeki en deneyimli teknik ekip ile çalışır, tüm beyaz eşya markalarına müdahale ederiz.</p>
                 </div>
             </div>
         </div>
@@ -1905,7 +1941,7 @@
     </section>
     
     <!-- Müşteri Yorumları -->
-    <section id="yorumlar" style="padding: 60px 0; background-color: #f4f7fc;">
+    <section id="yorumlar" style="padding: 60px 0; background-color: var(--primary-light);">
         <div class="container">
             <div class="section-title">
                 <h2>Müşteri Yorumları</h2>
@@ -2003,8 +2039,8 @@
     <section id="iletisim" style="padding: 60px 0;">
         <div class="container">
             <div class="contact-section">
-                <h2 style="color: #1e4a8b; margin-bottom: 20px;">Profesyonel Destek İçin</h2>
-                <p style="font-size: 1.2rem; max-width: 500px; margin: 20px auto; color: #666;">7 gün 24 saat kesintisiz hizmet. Hemen arayın, aynı gün servis randevunuzu oluşturalım.</p>
+                <h2 style="color: var(--primary-dark); margin-bottom: 20px;">Profesyonel Destek İçin</h2>
+                <p style="font-size: 1.2rem; max-width: 500px; margin: 20px auto; color: var(--text-dark);">7 gün 24 saat kesintisiz hizmet. Hemen arayın, aynı gün servis randevunuzu oluşturalım.</p>
                 
                 <a href="tel:+905339309689" class="contact-phone">0533 930 96 89</a>
                 
