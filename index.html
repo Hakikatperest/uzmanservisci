@@ -360,8 +360,8 @@
         .call-button-hero {
             display: inline-flex;
             align-items: center;
-            background-color: #C89F68;
-            color: #0A2472;
+            background-color: #0A2472;
+            color: white;
             padding: 14px 28px;
             border-radius: 4px;
             font-weight: 700;
@@ -372,7 +372,7 @@
         }
         
         .call-button-hero:hover {
-            background-color: #b8894f;
+            background-color: #051a4a;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
@@ -847,91 +847,23 @@
             font-size: 28px;
         }
         
-        /* MAKALELER BÖLÜMÜ */
-        .blog-grid {
+        /* YORUMLAR */
+        .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(10,36,114,0.1);
-        }
-        
-        .blog-image {
+            gap: 25px;
             width: 100%;
-            height: 200px;
-            overflow: hidden;
         }
         
-        .blog-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .blog-card:hover .blog-image img {
-            transform: scale(1.1);
-        }
-        
-        .blog-content {
-            padding: 25px;
-        }
-        
-        .blog-date {
-            font-size: 0.85rem;
-            color: #C89F68;
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: block;
-        }
-        
-        .blog-title {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            color: #0A2472;
-            line-height: 1.4;
-        }
-        
-        .blog-excerpt {
-            color: #666;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
-        
-        .blog-link {
-            color: #0A2472;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s ease;
-        }
-        
-        .blog-link:hover {
-            gap: 10px;
-            color: #C89F68;
-        }
-        
-        /* YORUMLAR */
         .review-card {
             background: white;
             border-radius: 8px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border: 1px solid #f0f4fa;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .review-text {
@@ -940,6 +872,7 @@
             margin-bottom: 24px;
             line-height: 1.6;
             font-style: italic;
+            flex-grow: 1;
         }
         
         .review-author {
@@ -948,11 +881,12 @@
             gap: 16px;
             border-top: 1px solid #f0f4fa;
             padding-top: 24px;
+            margin-top: auto;
         }
         
         .author-avatar {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
             background: #f0f4fa;
             border-radius: 50%;
             display: flex;
@@ -960,6 +894,9 @@
             justify-content: center;
             color: #0A2472;
             font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            border: 2px solid #C89F68;
         }
         
         .author-info h4 {
@@ -969,7 +906,7 @@
         }
         
         .author-info p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #888;
             margin: 0;
         }
@@ -1093,7 +1030,7 @@
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-bottom: 60px;
             width: 100%;
@@ -1261,10 +1198,6 @@
             .services-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-            
-            .blog-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
         
         @media (max-width: 992px) {
@@ -1272,7 +1205,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .blog-grid {
+            .reviews-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -1370,9 +1303,9 @@
                 margin: 0 auto;
             }
             
-            .blog-grid {
+            .reviews-grid {
                 grid-template-columns: 1fr;
-                max-width: 400px;
+                max-width: 450px;
                 margin: 0 auto;
             }
             
@@ -1434,6 +1367,23 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+            }
+            
+            .contact-methods .btn {
+                width: 100%;
+            }
+            
+            .hero-content .btn, .hero-content .whatsapp-button-hero {
+                width: 100%;
+                margin-left: 0;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1468,21 +1418,22 @@
                 grid-template-columns: 1fr;
             }
             
-            .contact-methods {
-                flex-direction: column;
-            }
-            
-            .contact-methods .btn {
-                width: 100%;
-            }
-            
-            .hero-content .btn, .hero-content .whatsapp-button-hero {
-                width: 100%;
-                margin-left: 0;
-            }
-            
             .hero-content {
                 padding: 0 15px;
+            }
+            
+            .reviews-grid {
+                max-width: 100%;
+            }
+            
+            .review-card {
+                padding: 25px;
+            }
+            
+            .author-avatar {
+                width: 48px;
+                height: 48px;
+                font-size: 1.1rem;
             }
         }
         
@@ -1532,21 +1483,19 @@
                 <!-- Ana Navigasyon -->
                 <nav class="main-nav" id="mainNav">
                     <ul>
-                        <li><a href="#home" class="active">Ana Sayfa</a></li>
-                        <li><a href="#hizmetler">Hizmetler</a></li>
+                        <li><a href="#home" class="active">Anasayfa</a></li>
                         <li class="dropdown" id="servicesDropdown">
-                            <a href="#hizmetler">Hizmetler <i class="fas fa-chevron-down"></i></a>
+                            <a href="#hizmetler">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-content">
-                                <a href="#buzdolabi">Buzdolabı Servisi</a>
-                                <a href="#camasiramakinesi">Çamaşır Makinesi Servisi</a>
-                                <a href="#bulasikmakinesi">Bulaşık Makinesi Servisi</a>
-                                <a href="#firin">Fırın Servisi</a>
-                                <a href="#derindondurucu">Derin Dondurucu Servisi</a>
-                                <a href="#elektriksupurgesi">Elektrik Süpürgesi Servisi</a>
+                                <a href="https://www.uzmanservisci.com/buzdolabi-servisi">Buzdolabı Servisi</a>
+                                <a href="https://www.uzmanservisci.com/camasir-makinesi-servisi">Çamaşır Makinesi Servisi</a>
+                                <a href="https://www.uzmanservisci.com/bulasik-makinesi-servisi">Bulaşık Makinesi Servisi</a>
+                                <a href="https://www.uzmanservisci.com/firin-servisi">Fırın Servisi</a>
+                                <a href="https://www.uzmanservisci.com/derin-dondurucu-servisi">Derin Dondurucu Servisi</a>
+                                <a href="https://www.uzmanservisci.com/elektrik-supurgesi-servisi">Elektrik Süpürgesi Servisi</a>
                             </div>
                         </li>
-                        <li><a href="#bolgeler">Bölgeler</a></li>
-                        <li><a href="#blog">Makaleler</a></li>
+                        <li><a href="#bolgeler">Hizmet Bölgelerimiz</a></li>
                         <li><a href="#iletisim">İletişim</a></li>
                     </ul>
                 </nav>
@@ -1561,15 +1510,15 @@
     <section class="hero" id="home">
         <div class="hero-slider" id="heroSlider">
             <!-- Slide 1 -->
-            <div class="slide active" id="slide1" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide active" id="slide1" style="background-image: url('https://www.uzmanservisci.com/images/header1.webp');">
                 <div class="slide-overlay"></div>
             </div>
             <!-- Slide 2 -->
-            <div class="slide" id="slide2" style="background-image: url('https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide" id="slide2" style="background-image: url('https://www.uzmanservisci.com/images/header2.webp');">
                 <div class="slide-overlay"></div>
             </div>
             <!-- Slide 3 -->
-            <div class="slide" id="slide3" style="background-image: url('https://images.unsplash.com/photo-1626806787461-102c1bfa4f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="slide" id="slide3" style="background-image: url('https://www.uzmanservisci.com/images/header3.webp');">
                 <div class="slide-overlay"></div>
             </div>
         </div>
@@ -1655,7 +1604,7 @@
                 <!-- Buzdolabı Servisi -->
                 <div class="service-card" data-product="buzdolabi">
                     <div class="service-card-inner">
-                        <div class="service-card-front" style="background-image: url('https://images.unsplash.com/photo-1584568694244-14d7cbb8a9e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="service-card-front" style="background-image: url('https://www.uzmanservisci.com/images/buzdolabi.webp');">
                             <div class="service-content">
                                 <div class="service-icon">
                                     <i class="fas fa-temperature-low"></i>
@@ -1688,7 +1637,7 @@
                 <!-- Çamaşır Makinesi Servisi -->
                 <div class="service-card" data-product="camasiramakinesi">
                     <div class="service-card-inner">
-                        <div class="service-card-front" style="background-image: url('https://images.unsplash.com/photo-1626806787461-102c1bfa4f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="service-card-front" style="background-image: url('https://www.uzmanservisci.com/images/camasir.webp');">
                             <div class="service-content">
                                 <div class="service-icon">
                                     <i class="fas fa-tshirt"></i>
@@ -1721,7 +1670,7 @@
                 <!-- Bulaşık Makinesi Servisi -->
                 <div class="service-card" data-product="bulasikmakinesi">
                     <div class="service-card-inner">
-                        <div class="service-card-front" style="background-image: url('https://images.unsplash.com/photo-1604335399105-6c9c6e8e8f3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="service-card-front" style="background-image: url('https://www.uzmanservisci.com/images/bulasik.webp');">
                             <div class="service-content">
                                 <div class="service-icon">
                                     <i class="fas fa-utensils"></i>
@@ -1754,7 +1703,7 @@
                 <!-- Fırın Servisi -->
                 <div class="service-card" data-product="firin">
                     <div class="service-card-inner">
-                        <div class="service-card-front" style="background-image: url('https://images.unsplash.com/photo-1606914469725-e398b4d5156b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="service-card-front" style="background-image: url('https://www.uzmanservisci.com/images/firin.webp');">
                             <div class="service-content">
                                 <div class="service-icon">
                                     <i class="fas fa-oven"></i>
@@ -1787,7 +1736,7 @@
                 <!-- Derin Dondurucu Servisi -->
                 <div class="service-card" data-product="derindondurucu">
                     <div class="service-card-inner">
-                        <div class="service-card-front" style="background-image: url('https://images.unsplash.com/photo-1584568694244-14d7cbb8a9e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="service-card-front" style="background-image: url('https://www.uzmanservisci.com/images/derin.webp');">
                             <div class="service-content">
                                 <div class="service-icon">
                                     <i class="fas fa-snowflake"></i>
@@ -1820,7 +1769,7 @@
                 <!-- Elektrik Süpürgesi Servisi -->
                 <div class="service-card" data-product="elektriksupurgesi">
                     <div class="service-card-inner">
-                        <div class="service-card-front" style="background-image: url('https://images.unsplash.com/photo-1558317374-067fb5f30001?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                        <div class="service-card-front" style="background-image: url('https://www.uzmanservisci.com/images/elektrik.webp');">
                             <div class="service-content">
                                 <div class="service-icon">
                                     <i class="fas fa-broom"></i>
@@ -1890,7 +1839,7 @@
             
             <div class="about-container">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Uzman Servisci Ekibi">
+                    <img src="https://www.uzmanservisci.com/images/uzman.webp" alt="Uzman Servisci Ekibi">
                     <div class="about-badge">
                         <span>10+</span>
                         <span>Yıl Deneyim</span>
@@ -1904,11 +1853,11 @@
                     <p>Tüm beyaz eşya markalarına profesyonel müdahale, orijinal yedek parça kullanımı ve 2 yıl garanti ile hizmetinizdeyiz. Aynı gün servis garantimiz ile arızanıza en kısa sürede çözüm üretiyoruz.</p>
                     
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Sağlık Bakanlığı Onaylı İlaçlar</li>
+                        <li><i class="fas fa-check"></i> 7/24 Acil Servis Hizmeti</li>
                         <li><i class="fas fa-check"></i> Uzman Ekip & Modern Ekipmanlar</li>
-                        <li><i class="fas fa-check"></i> 7/24 Acil İlaçlama Hizmeti</li>
-                        <li><i class="fas fa-check"></i> Garantili İlaçlama Hizmeti</li>
-                        <li><i class="fas fa-check"></i> Çevre ve İnsan Sağlığına Duyarlı Çözümler</li>
+                        <li><i class="fas fa-check"></i> Orijinal Yedek Parça Kullanımı</li>
+                        <li><i class="fas fa-check"></i> 2 Yıl Garantili Onarım</li>
+                        <li><i class="fas fa-check"></i> Aynı Gün Müdahale</li>
                     </ul>
                     
                     <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
@@ -1924,65 +1873,14 @@
         </div>
     </section>
     
-    <!-- Blog / Makaleler Bölümü -->
-    <section id="blog" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Teknik Servis Rehberi</h2>
-                <p style="max-width: 700px; margin: 20px auto 0;">Beyaz eşya bakımı, arıza tespiti ve tasarruf yöntemleri hakkında uzman yazıları</p>
-            </div>
-            
-            <div class="blog-grid">
-                <!-- Makale 1 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Buzdolabı bakımı" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date">15 Şubat 2026</span>
-                        <h3 class="blog-title">Buzdolabınız Neden Soğutmuyor? 7 Olası Sebep</h3>
-                        <p class="blog-excerpt">Buzdolabı soğutma sorunları genellikle basit arızalardan kaynaklanır. Fan motoru, termostat veya gaz kaçağı... Detaylı rehberimizle sorunu tespit edin.</p>
-                        <a href="#" class="blog-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <!-- Makale 2 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfa4f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Çamaşır makinesi bakımı" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date">8 Şubat 2026</span>
-                        <h3 class="blog-title">Çamaşır Makinesi Su Almıyorsa Yapılacak 5 Kontrol</h3>
-                        <p class="blog-excerpt">Su giriş filtresi tıkanıklığı, kapak sensörü arızası veya su vanesi... Sorunu kendiniz tespit edin, gereksiz masraflardan kaçının.</p>
-                        <a href="#" class="blog-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <!-- Makale 3 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1604335399105-6c9c6e8e8f3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bulaşık makinesi temizliği" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date">1 Şubat 2026</span>
-                        <h3 class="blog-title">Bulaşık Makineniz Kötü Kokuyorsa Almanız Gereken Önlemler</h3>
-                        <p class="blog-excerpt">Kötü koku genellikle filtre tıkanıklığı veya bakteri üremesinden kaynaklanır. Profesyonel temizlik öncesi yapabilecekleriniz.</p>
-                        <a href="#" class="blog-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-    
     <!-- Müşteri Yorumları -->
-    <section id="yorumlar" style="padding: 60px 0;">
+    <section id="yorumlar" style="padding: 60px 0; background-color: #f8f9fa;">
         <div class="container">
             <div class="section-title">
                 <h2>Müşteri Yorumları</h2>
             </div>
             
-            <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-text">"Çamaşır makinem su kaçırıyordu, akşam 20:00'de aradım 45 dakikada geldiler. Son derece profesyonel ve temiz çalışma. Kesinlikle tavsiye ederim."</div>
                     <div class="review-author">
@@ -2083,8 +1981,6 @@
                     <a href="tel:+905339309689" class="btn">Hemen Ara</a>
                     <a href="https://wa.me/905339309689?text=Merhaba,%20servis%20talebi%20oluşturmak%20istiyorum." target="_blank" class="btn" style="background-color: #25D366;">WhatsApp'tan Yazış</a>
                 </div>
-                
-                <p style="color: #666; margin-top: 20px;">✉️ info@uzmanservisci.com<br>📍 Merkez Ofis: Sancaktepe/İstanbul</p>
             </div>
         </div>
     </section>
@@ -2110,32 +2006,20 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h4 class="footer-title">Kurumsal</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Ana Sayfa</a></li>
-                        <li><a href="#about">Hakkımızda</a></li>
-                        <li><a href="#blog">Makaleler</a></li>
-                        <li><a href="#iletisim">İletişim</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
                     <h4 class="footer-title">Hizmetlerimiz</h4>
                     <ul class="footer-links">
-                        <li><a href="#buzdolabi">Buzdolabı Servisi</a></li>
-                        <li><a href="#camasiramakinesi">Çamaşır Makinesi Servisi</a></li>
-                        <li><a href="#bulasikmakinesi">Bulaşık Makinesi Servisi</a></li>
-                        <li><a href="#firin">Fırın Servisi</a></li>
+                        <li><a href="https://www.uzmanservisci.com/buzdolabi-servisi">Buzdolabı Servisi</a></li>
+                        <li><a href="https://www.uzmanservisci.com/camasir-makinesi-servisi">Çamaşır Makinesi Servisi</a></li>
+                        <li><a href="https://www.uzmanservisci.com/bulasik-makinesi-servisi">Bulaşık Makinesi Servisi</a></li>
+                        <li><a href="https://www.uzmanservisci.com/firin-servisi">Fırın Servisi</a></li>
+                        <li><a href="https://www.uzmanservisci.com/derin-dondurucu-servisi">Derin Dondurucu Servisi</a></li>
+                        <li><a href="https://www.uzmanservisci.com/elektrik-supurgesi-servisi">Elektrik Süpürgesi Servisi</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4 class="footer-title">İletişim</h4>
                     <ul class="contact-info-footer">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>Merkez Ofis: Sancaktepe/İstanbul</div>
-                        </li>
                         <li>
                             <i class="fas fa-phone"></i>
                             <div>0533 930 96 89</div>
@@ -2209,7 +2093,24 @@
         
         startSlider();
         
-        // Kart döndürme fonksiyonelliği
+        // Kart döndürme fonksiyonelliği (tekrar tıklanınca eski haline dönsün)
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Eğer tıklanan eleman buton veya butonun içindeki bir eleman değilse
+                if (!e.target.closest('.btn') && !e.target.closest('.flip-indicator')) {
+                    this.classList.toggle('flipped');
+                    
+                    // Diğer açık kartları kapat (opsiyonel)
+                    document.querySelectorAll('.service-card.flipped').forEach(otherCard => {
+                        if (otherCard !== this) {
+                            otherCard.classList.remove('flipped');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Flip indicator'e tıklandığında sadece ilgili kartı döndür
         document.querySelectorAll('.flip-indicator').forEach(indicator => {
             indicator.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -2218,8 +2119,8 @@
                 if (card) {
                     card.classList.toggle('flipped');
                     
-                    document.querySelectorAll('.service-card').forEach(otherCard => {
-                        if (otherCard !== card && otherCard.classList.contains('flipped')) {
+                    document.querySelectorAll('.service-card.flipped').forEach(otherCard => {
+                        if (otherCard !== card) {
                             otherCard.classList.remove('flipped');
                         }
                     });
@@ -2227,22 +2128,11 @@
             });
         });
         
-        // Kartın ön yüzüne tıklayınca döndürme
-        document.querySelectorAll('.service-card-front').forEach(cardFront => {
-            cardFront.addEventListener('click', function(e) {
-                if (!e.target.closest('.flip-indicator')) {
-                    const card = this.closest('.service-card');
-                    
-                    if (card) {
-                        card.classList.toggle('flipped');
-                        
-                        document.querySelectorAll('.service-card').forEach(otherCard => {
-                            if (otherCard !== card && otherCard.classList.contains('flipped')) {
-                                otherCard.classList.remove('flipped');
-                            }
-                        });
-                    }
-                }
+        // Kartın arkasındaki butonlara tıklandığında kartın dönmesini engelle ve yönlendir
+        document.querySelectorAll('.service-card-back .btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Kartın dönmesini engelle
+                // Buton zaten bir link olduğu için normal yönlendirme yapacak
             });
         });
         
@@ -2329,18 +2219,6 @@
                     this.classList.add('active');
                     answer.classList.add('active');
                 }
-            });
-        });
-        
-        // Sayfa yüklendiğinde kart arkasındaki tüm butonların doğrudan çalışmasını sağla
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.service-card-back .btn').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href && href !== '#') {
-                        console.log('Buton tıklandı, yönlendiriliyor:', href);
-                    }
-                });
             });
         });
     </script>
