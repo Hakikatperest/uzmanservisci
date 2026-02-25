@@ -41,6 +41,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             width: 100%;
+            background-color: #f4f7fc;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -72,29 +73,41 @@
         
         .btn {
             display: inline-block;
-            background-color: #0A2472;
+            background-color: #1e4a8b;
             color: white;
             padding: 12px 28px;
-            border-radius: 4px;
+            border-radius: 50px;
             font-weight: 600;
             font-size: 16px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         
         .btn:hover {
-            background-color: #051a4a;
+            background-color: #0f2c4f;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         
         .btn-accent {
-            background-color: #C89F68;
+            background-color: #e6b15c;
         }
         
         .btn-accent:hover {
-            background-color: #b8894f;
+            background-color: #cf9b45;
+        }
+        
+        .btn-outline {
+            background-color: white;
+            color: #1e4a8b;
+            border: 2px solid #1e4a8b;
+        }
+        
+        .btn-outline:hover {
+            background-color: #1e4a8b;
+            color: white;
         }
         
         .section-title {
@@ -105,7 +118,7 @@
         
         .section-title h2 {
             font-size: 36px;
-            color: #0A2472;
+            color: #1e4a8b;
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
@@ -116,7 +129,7 @@
             position: absolute;
             width: 60px;
             height: 3px;
-            background-color: #C89F68;
+            background-color: #e6b15c;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -125,7 +138,7 @@
         /* HEADER */
         header {
             background-color: white;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 20px rgba(0, 40, 80, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -151,30 +164,32 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 24px;
-            color: #0A2472;
+            color: #1e4a8b;
         }
         
         .logo-text span {
-            color: #C89F68;
+            color: #e6b15c;
             font-weight: 400;
         }
         
         .header-phone-button {
             display: flex;
             align-items: center;
-            background-color: #0A2472;
-            color: white;
+            background-color: white;
+            color: #1e4a8b;
             padding: 10px 20px;
-            border-radius: 4px;
+            border-radius: 50px;
             font-weight: 600;
             font-size: 15px;
             white-space: nowrap;
             transition: all 0.3s ease;
             margin-left: 20px;
+            border: 2px solid #1e4a8b;
         }
         
         .header-phone-button:hover {
-            background-color: #051a4a;
+            background-color: #1e4a8b;
+            color: white;
             transform: translateY(-2px);
         }
         
@@ -197,13 +212,14 @@
         .main-nav a {
             font-weight: 500;
             font-size: 16px;
-            color: #333;
+            color: #1e4a8b;
             padding: 5px 0;
             position: relative;
         }
         
         .main-nav a:hover, .main-nav a.active {
-            color: #0A2472;
+            color: #1e4a8b;
+            font-weight: 600;
         }
         
         .main-nav a:after {
@@ -211,7 +227,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background-color: #C89F68;
+            background-color: #e6b15c;
             bottom: 0;
             left: 0;
             transition: width 0.3s ease;
@@ -229,13 +245,13 @@
             position: absolute;
             background-color: white;
             min-width: 220px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 40, 80, 0.15);
             z-index: 1;
             opacity: 0;
             visibility: hidden;
             transform: translateY(10px);
             transition: all 0.3s ease;
-            border-top: 3px solid #C89F68;
+            border-top: 3px solid #e6b15c;
         }
         
         .dropdown:hover .dropdown-content {
@@ -251,15 +267,16 @@
         }
         
         .dropdown-content a:hover {
-            background-color: #f8f9fa;
+            background-color: #f0f7ff;
             padding-left: 25px;
+            color: #1e4a8b;
         }
         
         .mobile-menu-btn {
             display: none;
             font-size: 24px;
             cursor: pointer;
-            color: #333;
+            color: #1e4a8b;
             order: 2;
         }
         
@@ -304,7 +321,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 36, 114, 0.7);
+            background: rgba(30, 74, 139, 0.75);
         }
         
         .hero-content {
@@ -334,7 +351,7 @@
             font-size: 28px;
             margin-bottom: 25px;
             font-weight: 400;
-            color: #C89F68;
+            color: #e6b15c;
         }
         
         .hero p {
@@ -346,8 +363,8 @@
         
         .hero-badge {
             display: inline-block;
-            background: rgba(200, 159, 104, 0.2);
-            color: #C89F68;
+            background: rgba(255, 255, 255, 0.15);
+            color: #e6b15c;
             padding: 8px 20px;
             border-radius: 40px;
             font-weight: 600;
@@ -360,19 +377,22 @@
         .call-button-hero {
             display: inline-flex;
             align-items: center;
-            background-color: #0A2472;
-            color: white;
+            background-color: white;
+            color: #1e4a8b;
             padding: 14px 28px;
-            border-radius: 4px;
+            border-radius: 50px;
             font-weight: 700;
             font-size: 18px;
             white-space: nowrap;
             transition: all 0.3s ease;
             margin-top: 20px;
+            border: 2px solid white;
         }
         
         .call-button-hero:hover {
-            background-color: #051a4a;
+            background-color: #1e4a8b;
+            color: white;
+            border-color: #1e4a8b;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
@@ -387,7 +407,7 @@
             background-color: #25D366;
             color: white;
             padding: 14px 28px;
-            border-radius: 4px;
+            border-radius: 50px;
             font-weight: 600;
             font-size: 18px;
             white-space: nowrap;
@@ -419,7 +439,7 @@
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: #C89F68;
+            color: #e6b15c;
             line-height: 1;
         }
         
@@ -456,13 +476,13 @@
         }
         
         .slider-dot.active {
-            background-color: #C89F68;
+            background-color: #e6b15c;
             transform: scale(1.2);
         }
         
         /* HİZMETLER BÖLÜMÜ */
         .services {
-            background-color: #f8f9fa;
+            background-color: #f4f7fc;
             width: 100%;
         }
         
@@ -475,9 +495,9 @@
         
         .service-card {
             background-color: white;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 25px rgba(30, 74, 139, 0.1);
             transition: all 0.3s ease;
             position: relative;
             height: 350px;
@@ -504,7 +524,7 @@
             height: 100%;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
         }
         
@@ -525,7 +545,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to bottom, rgba(10,36,114,0.2) 0%, rgba(10,36,114,0.8) 100%);
+            background: linear-gradient(to bottom, rgba(30,74,139,0.3) 0%, rgba(30,74,139,0.85) 100%);
             z-index: 1;
         }
         
@@ -566,7 +586,7 @@
         }
         
         .service-card-back {
-            background-color: #0A2472;
+            background-color: #1e4a8b;
             color: white;
             transform: rotateY(180deg);
             display: flex;
@@ -583,7 +603,7 @@
         }
         
         .service-card-back h3 {
-            color: #C89F68;
+            color: #e6b15c;
             margin-bottom: 15px;
             font-size: 20px;
             font-weight: 700;
@@ -615,7 +635,7 @@
         }
         
         .product-features::-webkit-scrollbar-thumb {
-            background: rgba(200, 159, 104, 0.5);
+            background: rgba(230, 177, 92, 0.5);
             border-radius: 2px;
         }
         
@@ -639,7 +659,7 @@
         }
         
         .product-features i {
-            color: #C89F68;
+            color: #e6b15c;
             margin-right: 8px;
             font-size: 14px;
             flex-shrink: 0;
@@ -648,27 +668,29 @@
         }
         
         .service-card-back .btn {
-            background-color: #C89F68;
-            color: #0A2472;
+            background-color: white;
+            color: #1e4a8b;
             font-weight: 700;
             padding: 10px 20px;
             font-size: 15px;
-            border: none;
-            border-radius: 6px;
+            border: 2px solid white;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             width: auto;
             display: inline-block;
             text-decoration: none;
             min-width: 140px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             text-align: center;
             margin-top: 5px;
             white-space: nowrap;
         }
         
         .service-card-back .btn:hover {
-            background-color: #b8894f;
+            background-color: #1e4a8b;
+            color: white;
+            border-color: #e6b15c;
             transform: translateY(-3px);
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
         }
@@ -678,9 +700,9 @@
             top: 15px;
             right: 15px;
             background: rgba(255, 255, 255, 0.9);
-            color: #0A2472;
+            color: #1e4a8b;
             padding: 5px 10px;
-            border-radius: 4px;
+            border-radius: 50px;
             font-size: 12px;
             font-weight: 600;
             z-index: 10;
@@ -703,9 +725,9 @@
         /* BÖLGELER BÖLÜMÜ */
         .regions-section {
             background-color: white;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 60px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 15px 40px rgba(30, 74, 139, 0.1);
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -719,8 +741,8 @@
         }
         
         .region-tag {
-            background: #f0f4fa;
-            color: #0A2472;
+            background: #e6f0ff;
+            color: #1e4a8b;
             padding: 12px 30px;
             border-radius: 40px;
             font-weight: 600;
@@ -730,20 +752,20 @@
         }
         
         .region-tag:hover {
-            background: #0A2472;
+            background: #1e4a8b;
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(10,36,114,0.2);
+            box-shadow: 0 8px 20px rgba(30,74,139,0.3);
         }
         
         .region-tag.region-highlight {
-            background: #0A2472;
+            background: #1e4a8b;
             color: white;
         }
         
         .region-highlight:hover {
-            background: #C89F68;
-            color: #0A2472;
+            background: #e6b15c;
+            color: #1e4a8b;
         }
         
         /* HAKKIMIZDA BÖLÜMÜ */
@@ -762,8 +784,8 @@
         
         .about-img img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(30, 74, 139, 0.2);
             height: auto;
         }
         
@@ -771,8 +793,8 @@
             position: absolute;
             bottom: -20px;
             right: -20px;
-            background-color: #C89F68;
-            color: #0A2472;
+            background-color: #e6b15c;
+            color: #1e4a8b;
             width: 140px;
             height: 140px;
             border-radius: 50%;
@@ -781,7 +803,7 @@
             justify-content: center;
             align-items: center;
             font-weight: 700;
-            box-shadow: 0 5px 15px rgba(200,159,104,0.3);
+            box-shadow: 0 5px 15px rgba(230,177,92,0.3);
         }
         
         .about-badge span:first-child {
@@ -796,7 +818,7 @@
         .about-content h3 {
             font-size: 32px;
             margin-bottom: 20px;
-            color: #0A2472;
+            color: #1e4a8b;
         }
         
         .about-content p {
@@ -812,7 +834,7 @@
         }
         
         .features-list i {
-            color: #C89F68;
+            color: #e6b15c;
             margin-right: 10px;
             margin-top: 5px;
             font-size: 18px;
@@ -823,6 +845,7 @@
             background: white;
             padding: 40px 0;
             width: 100%;
+            border-bottom: 1px solid rgba(30, 74, 139, 0.1);
         }
         
         .trust-grid {
@@ -837,13 +860,13 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            color: #0A2472;
+            color: #1e4a8b;
             font-weight: 600;
             font-size: 1.1rem;
         }
         
         .trust-item i {
-            color: #C89F68;
+            color: #e6b15c;
             font-size: 28px;
         }
         
@@ -857,10 +880,10 @@
         
         .review-card {
             background: white;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f4fa;
+            box-shadow: 0 10px 25px rgba(30, 74, 139, 0.08);
+            border: 1px solid rgba(30, 74, 139, 0.1);
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -879,7 +902,7 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            border-top: 1px solid #f0f4fa;
+            border-top: 1px solid rgba(30, 74, 139, 0.1);
             padding-top: 24px;
             margin-top: auto;
         }
@@ -887,22 +910,22 @@
         .author-avatar {
             width: 52px;
             height: 52px;
-            background: #f0f4fa;
+            background: #e6f0ff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #0A2472;
+            color: #1e4a8b;
             font-weight: 700;
             font-size: 1.2rem;
             flex-shrink: 0;
-            border: 2px solid #C89F68;
+            border: 2px solid #e6b15c;
         }
         
         .author-info h4 {
             font-size: 1rem;
             margin-bottom: 4px;
-            color: #0A2472;
+            color: #1e4a8b;
         }
         
         .author-info p {
@@ -913,7 +936,7 @@
         
         /* FAQ BÖLÜMÜ */
         .faq-section {
-            background-color: #f8f9fa;
+            background-color: white;
             padding: 80px 0;
             width: 100%;
         }
@@ -928,7 +951,7 @@
             margin-bottom: 15px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(30, 74, 139, 0.1);
             width: 100%;
         }
         
@@ -943,21 +966,24 @@
             font-size: 18px;
             transition: all 0.3s ease;
             width: 100%;
-            color: #0A2472;
+            color: #1e4a8b;
+            border-left: 4px solid transparent;
         }
         
         .faq-question:hover {
-            background-color: #f0f4fa;
+            background-color: #f0f7ff;
+            border-left-color: #e6b15c;
         }
         
         .faq-question.active {
-            background-color: #0A2472;
+            background-color: #1e4a8b;
             color: white;
+            border-left-color: #e6b15c;
         }
         
         .faq-question i {
             transition: transform 0.3s ease;
-            color: #C89F68;
+            color: #e6b15c;
         }
         
         .faq-question.active i {
@@ -987,19 +1013,19 @@
         /* İLETİŞİM BÖLÜMÜ */
         .contact-section {
             background: white;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 60px;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f4fa;
+            box-shadow: 0 15px 40px rgba(30, 74, 139, 0.1);
+            border: 1px solid rgba(30, 74, 139, 0.1);
         }
         
         .contact-phone {
             font-size: 3rem;
             font-weight: 700;
-            color: #0A2472;
+            color: #1e4a8b;
             text-decoration: none;
             display: inline-block;
             margin: 30px 0;
@@ -1008,7 +1034,7 @@
         }
         
         .contact-phone:hover {
-            color: #C89F68;
+            color: #e6b15c;
             transform: scale(1.02);
         }
         
@@ -1022,7 +1048,7 @@
         
         /* FOOTER */
         footer {
-            background-color: #0A2472;
+            background-color: #1e4a8b;
             color: #ddd;
             padding-top: 80px;
             width: 100%;
@@ -1043,7 +1069,7 @@
         }
         
         .footer-logo h3 span {
-            color: #C89F68;
+            color: #e6b15c;
             font-weight: 400;
         }
         
@@ -1066,7 +1092,7 @@
             position: absolute;
             width: 40px;
             height: 2px;
-            background-color: #C89F68;
+            background-color: #e6b15c;
             bottom: 0;
             left: 0;
         }
@@ -1081,7 +1107,7 @@
         }
         
         .footer-links a:hover {
-            color: #C89F68;
+            color: #e6b15c;
             padding-left: 5px;
         }
         
@@ -1093,7 +1119,7 @@
         }
         
         .contact-info-footer i {
-            color: #C89F68;
+            color: #e6b15c;
             margin-right: 15px;
             font-size: 18px;
             margin-top: 3px;
@@ -1118,8 +1144,8 @@
         }
         
         .social-icon:hover {
-            background-color: #C89F68;
-            color: #0A2472;
+            background-color: #e6b15c;
+            color: #1e4a8b;
             transform: translateY(-3px);
         }
         
@@ -1154,13 +1180,13 @@
             color: white;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
-            background-color: #0A2472;
+            background-color: #1e4a8b;
         }
         
         .call-btn:hover {
             transform: scale(1.1);
-            background-color: #C89F68;
-            color: #0A2472;
+            background-color: #e6b15c;
+            color: #1e4a8b;
         }
         
         .whatsapp-btn {
@@ -1184,13 +1210,18 @@
         
         /* ACİL BANNER */
         .emergency-banner {
-            background-color: #C89F68;
-            color: #0A2472;
+            background-color: #e6b15c;
+            color: white;
             text-align: center;
             padding: 10px;
             font-weight: 700;
             font-size: 18px;
             width: 100%;
+        }
+        
+        .emergency-banner i {
+            color: white;
+            margin: 0 8px;
         }
         
         /* MOBİL UYUMLULUK */
@@ -1822,8 +1853,8 @@
                     <span class="region-tag region-highlight">Ümraniye</span>
                 </div>
 
-                <div style="background: #f8f9fa; border-radius: 8px; padding: 30px; margin-top: 30px;">
-                    <h3 style="color: #0A2472; margin-bottom: 15px; text-align: center;">📍 Tüm ilçelerde profesyonel hizmet</h3>
+                <div style="background: #f0f7ff; border-radius: 8px; padding: 30px; margin-top: 30px;">
+                    <h3 style="color: #1e4a8b; margin-bottom: 15px; text-align: center;">📍 Tüm ilçelerde profesyonel hizmet</h3>
                     <p style="text-align: center; margin-bottom: 0;"><strong>Sancaktepe, Pendik, Kartal, Çekmeköy, Tuzla, Ataşehir, Sultanbeyli ve Ümraniye</strong> sınırları içerisinde ikamet eden müşterilerimize öncelikli servis avantajı sunuyoruz. Bölgenizdeki en deneyimli teknik ekip ile çalışır, tüm beyaz eşya markalarına müdahale ederiz.</p>
                 </div>
             </div>
@@ -1874,7 +1905,7 @@
     </section>
     
     <!-- Müşteri Yorumları -->
-    <section id="yorumlar" style="padding: 60px 0; background-color: #f8f9fa;">
+    <section id="yorumlar" style="padding: 60px 0; background-color: #f4f7fc;">
         <div class="container">
             <div class="section-title">
                 <h2>Müşteri Yorumları</h2>
@@ -1972,7 +2003,7 @@
     <section id="iletisim" style="padding: 60px 0;">
         <div class="container">
             <div class="contact-section">
-                <h2 style="color: #0A2472; margin-bottom: 20px;">Profesyonel Destek İçin</h2>
+                <h2 style="color: #1e4a8b; margin-bottom: 20px;">Profesyonel Destek İçin</h2>
                 <p style="font-size: 1.2rem; max-width: 500px; margin: 20px auto; color: #666;">7 gün 24 saat kesintisiz hizmet. Hemen arayın, aynı gün servis randevunuzu oluşturalım.</p>
                 
                 <a href="tel:+905339309689" class="contact-phone">0533 930 96 89</a>
