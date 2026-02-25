@@ -395,55 +395,70 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .call-button-hero {
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 550px;
+        }
+        
+        .hero-actions .btn,
+        .hero-actions .whatsapp-btn-hero {
+            flex: 1 1 auto;
+            min-width: 200px;
             display: inline-flex;
             align-items: center;
-            background-color: var(--accent-orange);
-            color: var(--white);
-            padding: 14px 28px;
+            justify-content: center;
+            padding: 14px 20px;
             border-radius: 50px;
             font-weight: 700;
             font-size: 18px;
             white-space: nowrap;
             transition: all 0.3s ease;
-            border: 2px solid var(--accent-orange);
+            border: 2px solid transparent;
+            gap: 8px;
+            box-shadow: var(--shadow-lg);
         }
         
-        .call-button-hero:hover {
+        .hero-actions .btn {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            border-color: var(--accent-orange);
+        }
+        
+        .hero-actions .btn:hover {
             background-color: var(--accent-orange-dark);
             border-color: var(--accent-orange-dark);
             transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
         }
         
-        .call-button-hero i {
-            margin-right: 10px;
-        }
-        
-        .whatsapp-button-hero {
-            display: inline-flex;
-            align-items: center;
+        .hero-actions .whatsapp-btn-hero {
             background-color: #25D366;
             color: var(--white);
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 18px;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-            margin-left: 15px;
-            border: 2px solid #25D366;
+            border-color: #25D366;
         }
         
-        .whatsapp-button-hero:hover {
+        .hero-actions .whatsapp-btn-hero:hover {
             background-color: #128C7E;
             border-color: #128C7E;
             transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
         }
         
-        .whatsapp-button-hero i {
-            margin-right: 10px;
+        /* Mobilde butonlar tam genişlikte ve eşit yükseklikte */
+        @media (max-width: 576px) {
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-actions .btn,
+            .hero-actions .whatsapp-btn-hero {
+                width: 100%;
+                min-width: auto;
+                font-size: 16px;
+                padding: 12px 16px;
+            }
         }
         
         .hero-stats {
@@ -498,6 +513,107 @@
         .slider-dot.active {
             background-color: var(--accent-orange);
             transform: scale(1.2);
+        }
+        
+        /* GÜVEN UNSURLARI - MODERN VE ANİMASYONLU */
+        .trust-bar {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+            padding: 30px 0;
+            width: 100%;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trust-bar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .trust-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 60px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 0.6s ease backwards;
+            flex: 1 0 auto;
+            justify-content: center;
+        }
+        
+        .trust-item:nth-child(1) { animation-delay: 0.1s; }
+        .trust-item:nth-child(2) { animation-delay: 0.2s; }
+        .trust-item:nth-child(3) { animation-delay: 0.3s; }
+        .trust-item:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .trust-item:hover {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .trust-item i {
+            color: var(--accent-orange);
+            font-size: 32px;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        
+        .trust-item:hover i {
+            color: var(--white);
+            transform: rotate(360deg) scale(1.2);
+        }
+        
+        .trust-item span {
+            background: linear-gradient(to right, var(--white), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        
+        .trust-item:hover span {
+            -webkit-text-fill-color: var(--white);
+            background: none;
         }
         
         /* HİZMETLER BÖLÜMÜ */
@@ -863,36 +979,6 @@
             margin-right: 10px;
             margin-top: 5px;
             font-size: 18px;
-        }
-        
-        /* GÜVEN UNSURLARI */
-        .trust-bar {
-            background: var(--white);
-            padding: 40px 0;
-            width: 100%;
-            border-bottom: 1px solid var(--gray-light);
-        }
-        
-        .trust-grid {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--primary-dark);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
-        .trust-item i {
-            color: var(--accent-orange);
-            font-size: 28px;
         }
         
         /* YORUMLAR */
@@ -1430,11 +1516,6 @@
                 font-size: 2rem;
             }
             
-            .trust-grid {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
             .footer-content {
                 grid-template-columns: 1fr;
             }
@@ -1445,11 +1526,6 @@
             
             .contact-methods .btn {
                 width: 100%;
-            }
-            
-            .hero-content .btn, .hero-content .whatsapp-button-hero {
-                width: 100%;
-                margin-left: 0;
             }
         }
         
@@ -1597,14 +1673,12 @@
                 <h2>Sancaktepe, Pendik, Kartal, Çekmeköy, Tuzla, Ataşehir, Sultanbeyli, Ümraniye</h2>
                 <p>Orijinal yedek parça garantisi, uzman ekip ve 7/24 destek ile beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.</p>
                 
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                    <!-- Telefon Arama Butonu -->
-                    <a href="tel:+905339309689" class="call-button-hero">
-                        <i class="fas fa-phone"></i> Hemen Ara: 0533 930 96 89
+                <!-- DÜZENLENMİŞ BUTON ALANI: her iki buton aynı boyda ve ortalanmış -->
+                <div class="hero-actions">
+                    <a href="tel:+905339309689" class="btn">
+                        <i class="fas fa-phone"></i> Hemen Ara
                     </a>
-                    
-                    <!-- WhatsApp Butonu -->
-                    <a href="https://wa.me/905339309689?text=Merhaba,%20servis%20talebi%20oluşturmak%20istiyorum." target="_blank" class="whatsapp-button-hero">
+                    <a href="https://wa.me/905339309689?text=Merhaba,%20servis%20talebi%20oluşturmak%20istiyorum." target="_blank" class="whatsapp-btn-hero">
                         <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
                     </a>
                 </div>
@@ -1636,7 +1710,7 @@
         </div>
     </section>
     
-    <!-- Güven Unsurları -->
+    <!-- GÜVEN UNSURLARI - MODERN VE ANİMASYONLU -->
     <div class="trust-bar">
         <div class="container">
             <div class="trust-grid">
