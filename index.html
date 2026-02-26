@@ -2312,6 +2312,16 @@
         // Dropdown Menü için Mobil Uyumluluk
         const servicesDropdown = document.getElementById('servicesDropdown');
         
+       if (servicesDropdown) {
+    const dropdownToggle = servicesDropdown.querySelector('a');
+
+    dropdownToggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); 
+            servicesDropdown.classList.toggle('active');
+        }
+    });
+}
         
         // Menü Linklerine Tıklandığında Mobil Menüyü Kapat
         document.querySelectorAll('.main-nav a').forEach(link => {
@@ -2348,3 +2358,5 @@
     </script>
 </body>
 </html>
+
+bu sayfada açılır menüdeki hizmetlerimiz bölümündeki buzdolabı servisi ve diğer butonlar çalışmıyor sebebi nedir
