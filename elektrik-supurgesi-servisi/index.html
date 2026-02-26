@@ -1213,12 +1213,14 @@
         
         // Dropdown mobil için
         const servicesDropdown = document.getElementById('servicesDropdown');
-        servicesDropdown.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.classList.toggle('active');
-            }
-        });
+const dropdownToggle = servicesDropdown.querySelector('a');
+
+dropdownToggle.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+        e.preventDefault(); 
+        servicesDropdown.classList.toggle('active');
+    }
+});
         
         // Menü linklerine tıklayınca kapat (mobilde)
         document.querySelectorAll('.main-nav a').forEach(link => {
