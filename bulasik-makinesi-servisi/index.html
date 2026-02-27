@@ -516,6 +516,57 @@
             box-shadow: var(--shadow-md);
             border: 1px solid var(--gray-light);
         }
+        .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 550px;
+    margin: 25px auto 0;
+}
+
+.hero-actions .btn,
+.hero-actions .whatsapp-btn-hero {
+    flex: 1 1 auto;
+    min-width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    gap: 8px;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-actions .btn {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    border-color: var(--accent-orange);
+}
+
+.hero-actions .btn:hover {
+    background-color: var(--accent-orange-dark);
+    border-color: var(--accent-orange-dark);
+    transform: translateY(-3px);
+}
+
+.hero-actions .whatsapp-btn-hero {
+    background-color: #25D366;
+    color: var(--white);
+    border-color: #25D366;
+}
+
+.hero-actions .whatsapp-btn-hero:hover {
+    background-color: #128C7E;
+    border-color: #128C7E;
+    transform: translateY(-3px);
+}
         
         .cta-phone {
             font-size: 2.5rem;
@@ -933,6 +984,25 @@
                 </nav>
             </div>
         </div>
+        <section style="background:#F8FAFC; padding:40px 0;">
+    <div class="container" style="text-align:center;">
+        <h2 style="color:var(--primary-dark); margin-bottom:10px;">
+            Bulaşık Makinesi Servisi Talep Edin
+        </h2>
+        <p style="margin-bottom:20px;">
+            7/24 aynı gün müdahale. Uzman teknik ekip 30 dakika içinde yola çıkar.
+        </p>
+
+        <div class="hero-actions">
+            <a href="tel:+905339309689" class="btn">
+                <i class="fas fa-phone"></i> Hemen Ara
+            </a>
+            <a href="https://wa.me/905339309689?text=Merhaba,%20servis%20için%20randevu%20almak%20istiyorum." target="_blank" class="whatsapp-btn-hero">
+                <i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz
+            </a>
+        </div>
+    </div>
+</section>
         <div class="menu-overlay" id="menuOverlay"></div>
     </header>
     
