@@ -180,3 +180,58 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 /* görsele dokununca arama */
 .kahraman-gorsel a,.kart-ara{display:block;cursor:pointer}
 .kart-ad{text-decoration:none;color:inherit}
+
+/* ═══ Sohbet balonu: "Su Tesisatı Ücretsiz Danışma Hattı" (2026-11-27) ═══
+   Sol altta hap + tıklanınca açılan küçük sohbet penceresi → "Görüşme başlat" WhatsApp'a gider.
+   Telefonda alttaki yapışık arama çubuğunun ÜSTÜNDE durur. Tüm hareket transform/opacity. */
+.sb-hap-kutu{position:fixed;left:20px;bottom:22px;z-index:45;transform-origin:left bottom;animation:sb-atis 3.2s ease-in-out infinite}
+.sb-hap-kutu:hover{animation:none}
+@keyframes sb-atis{0%,40%,100%{transform:scale(1)}7%{transform:scale(1.045)}15%{transform:scale(1)}22%{transform:scale(1.028)}30%{transform:scale(1)}}
+.sb-hap{position:relative;display:inline-flex;align-items:center;gap:12px;padding:13px 22px 13px 18px;border-radius:999px;border:0;cursor:pointer;font:inherit;text-align:left;text-decoration:none;color:#fff;background:linear-gradient(135deg,#35C75C 0%,#22A64C 52%,#158A3C 100%);box-shadow:0 12px 30px -8px rgba(21,138,60,.55),0 0 0 8px rgba(52,199,92,.10)}
+.sb-hap svg{width:26px;height:26px;fill:currentColor;flex-shrink:0}
+.sb-hap-yazi{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.sb-hap .sb-hap-yazi b{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;opacity:.95}
+.sb-hap-yazi span{font-size:1rem;font-weight:800;letter-spacing:-.01em}
+.sb-hap::after,.sb-hap::before{content:"";position:absolute;inset:0;border-radius:999px;pointer-events:none}
+.sb-hap::after{box-shadow:0 0 0 3px rgba(52,199,92,.6);animation:sb-halka 3.2s ease-out infinite}
+.sb-hap::before{box-shadow:0 0 0 2px rgba(52,199,92,.38);animation:sb-halka 3.2s ease-out .45s infinite}
+@keyframes sb-halka{0%{transform:scale(1);opacity:.85}38%,100%{transform:scale(1.11);opacity:0}}
+.sb-rozet{position:absolute;top:-14px;left:40px;z-index:1;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#15803D;font-size:.74rem;font-weight:800;padding:5px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(15,23,42,.35)}
+.sb-rozet i{width:8px;height:8px;border-radius:50%;background:#22C55E}
+.sb-yeni{position:absolute;top:-9px;right:-5px;z-index:2;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#E11D2E;color:#fff;font-size:.86rem;font-weight:800;line-height:1;display:grid;place-items:center;border:2.5px solid #fff;animation:sb-pop .45s cubic-bezier(.34,1.56,.64,1)}
+.sb-yeni[hidden],.sb-pencere[hidden],.sb-mesaj[hidden],.sb-yaziyor[hidden]{display:none}
+@keyframes sb-pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.sb-pencere{position:fixed;left:20px;bottom:104px;z-index:46;width:340px;max-width:calc(100vw - 24px);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 28px 64px -16px rgba(15,23,42,.38),0 0 0 1px rgba(15,23,42,.06);transform-origin:left bottom;transform:translateY(14px) scale(.94);opacity:0;transition:transform .3s cubic-bezier(.34,1.3,.64,1),opacity .2s}
+.sb-pencere.acik{transform:none;opacity:1}
+.sb-bas{display:flex;align-items:center;gap:11px;padding:13px 14px;background:linear-gradient(135deg,#22A64C 0%,#158A3C 100%);color:#fff}
+.sb-ava{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;flex-shrink:0}
+.sb-ava svg{width:26px;height:26px;fill:var(--petrol)}
+.sb-kim{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.sb-kim b{font-size:.98rem;font-weight:800}
+.sb-kim span{font-size:.76rem;font-weight:600;opacity:.92;display:inline-flex;align-items:center;gap:6px}
+.sb-kim span::before{content:"";width:7px;height:7px;border-radius:50%;background:#86EFAC}
+.sb-kapat{width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.18);color:#fff;padding:0;cursor:pointer;display:grid;place-items:center;flex-shrink:0}
+.sb-kapat:hover{background:rgba(255,255,255,.3)}
+.sb-govde{padding:16px 14px 18px;background:#ECE5DD;min-height:112px}
+.sb-mesaj,.sb-yaziyor{display:inline-block;max-width:88%;background:#fff;border-radius:0 12px 12px 12px;box-shadow:0 1px 1px rgba(15,23,42,.12)}
+.sb-mesaj{padding:9px 11px 7px;font-size:.9rem;line-height:1.45;color:#0f172a;animation:sb-gir .28s ease-out}
+.sb-mesaj time{display:block;text-align:right;font-size:.66rem;color:#64748b;margin-top:3px}
+.sb-yaziyor{padding:12px 13px}
+.sb-yaziyor i{display:inline-block;width:7px;height:7px;margin:0 2px;border-radius:50%;background:#94a3b8;animation:sb-nokta 1s ease-in-out infinite}
+.sb-yaziyor i:nth-child(2){animation-delay:.15s}.sb-yaziyor i:nth-child(3){animation-delay:.3s}
+@keyframes sb-nokta{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+@keyframes sb-gir{0%{transform:translateY(8px);opacity:0}100%{transform:none;opacity:1}}
+.sb-alt{padding:12px 14px 14px;background:#fff}
+.sb-git{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 16px;border-radius:999px;background:#0D8446;color:#fff;text-decoration:none;font-size:.98rem;font-weight:800}
+.sb-git:hover{background:#0B7A3F}
+.sb-git svg{width:22px;height:22px;fill:currentColor}
+.sb-hap:focus-visible,.sb-git:focus-visible,.sb-kapat:focus-visible{outline:3px solid #9fd0ff;outline-offset:2px}
+@media(max-width:760px){
+  .sb-hap-kutu{left:12px;bottom:calc(84px + env(safe-area-inset-bottom))}
+  .sb-hap{padding:11px 18px 11px 14px;gap:10px}
+  .sb-hap svg{width:22px;height:22px}
+  .sb-hap .sb-hap-yazi b{font-size:.68rem}.sb-hap-yazi span{font-size:.9rem}
+  .sb-rozet{left:32px;top:-13px;font-size:.68rem;padding:4px 10px}
+  .sb-pencere{left:12px;right:12px;width:auto;max-width:380px;bottom:calc(158px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){.sb-hap-kutu,.sb-hap::after,.sb-hap::before,.sb-yeni,.sb-mesaj,.sb-yaziyor i{animation:none!important}.sb-hap::after,.sb-hap::before{opacity:0}.sb-pencere{transition:opacity .15s;transform:none}}
