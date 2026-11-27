@@ -178,7 +178,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 /* ═══ Sohbet balonu: "Su Tesisatı Ücretsiz Danışma Hattı" (2026-11-27) ═══
    Sol altta hap + tıklanınca açılan küçük sohbet penceresi → "Görüşme başlat" WhatsApp'a gider.
    Telefonda alttaki yapışık arama çubuğunun ÜSTÜNDE durur. Tüm hareket transform/opacity. */
-.sb-hap-kutu{position:fixed;left:20px;bottom:22px;z-index:45;transform-origin:left bottom;animation:sb-atis 3.2s ease-in-out infinite}
+.sb-hap-kutu{position:fixed;left:22px;bottom:24px;z-index:45;transform-origin:left bottom;animation:sb-atis 3.2s ease-in-out infinite}
 .sb-hap-kutu:hover{animation:none}
 @keyframes sb-atis{0%,40%,100%{transform:scale(1)}7%{transform:scale(1.045)}15%{transform:scale(1)}22%{transform:scale(1.028)}30%{transform:scale(1)}}
 .sb-hap{position:relative;display:inline-flex;align-items:center;gap:12px;padding:13px 22px 13px 18px;border-radius:999px;border:0;cursor:pointer;font:inherit;text-align:left;text-decoration:none;color:#fff;background:linear-gradient(135deg,#35C75C 0%,#22A64C 52%,#158A3C 100%);box-shadow:0 12px 30px -8px rgba(21,138,60,.55),0 0 0 8px rgba(52,199,92,.10)}
@@ -195,7 +195,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 .sb-yeni{position:absolute;top:-9px;right:-5px;z-index:2;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#E11D2E;color:#fff;font-size:.86rem;font-weight:800;line-height:1;display:grid;place-items:center;border:2.5px solid #fff;animation:sb-pop .45s cubic-bezier(.34,1.56,.64,1)}
 .sb-yeni[hidden],.sb-pencere[hidden],.sb-mesaj[hidden],.sb-yaziyor[hidden]{display:none}
 @keyframes sb-pop{0%{transform:scale(0)}100%{transform:scale(1)}}
-.sb-pencere{position:fixed;left:20px;bottom:104px;z-index:46;width:340px;max-width:calc(100vw - 24px);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 28px 64px -16px rgba(15,23,42,.38),0 0 0 1px rgba(15,23,42,.06);transform-origin:left bottom;transform:translateY(14px) scale(.94);opacity:0;transition:transform .3s cubic-bezier(.34,1.3,.64,1),opacity .2s}
+.sb-pencere{position:fixed;left:22px;bottom:112px;z-index:46;width:340px;max-width:calc(100vw - 24px);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 28px 64px -16px rgba(15,23,42,.38),0 0 0 1px rgba(15,23,42,.06);transform-origin:left bottom;transform:translateY(14px) scale(.94);opacity:0;transition:transform .3s cubic-bezier(.34,1.3,.64,1),opacity .2s}
 .sb-pencere.acik{transform:none;opacity:1}
 .sb-bas{display:flex;align-items:center;gap:11px;padding:13px 14px;background:linear-gradient(135deg,#22A64C 0%,#158A3C 100%);color:#fff}
 .sb-ava{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;flex-shrink:0}
@@ -221,11 +221,17 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 .sb-git svg{width:22px;height:22px;fill:currentColor}
 .sb-hap:focus-visible,.sb-git:focus-visible,.sb-kapat:focus-visible{outline:3px solid #9fd0ff;outline-offset:2px}
 @media(max-width:760px){
-  .sb-hap-kutu{left:12px;bottom:calc(16px + env(safe-area-inset-bottom))}
-  .sb-hap{padding:11px 18px 11px 14px;gap:10px}
+  .sb-hap-kutu{left:16px;bottom:calc(18px + env(safe-area-inset-bottom))}
+  .sb-hap{padding:13px 20px 13px 17px;gap:11px}
+  .sb-hap svg{width:24px;height:24px}
+  .sb-hap .sb-hap-yazi b{font-size:.72rem}.sb-hap-yazi span{font-size:.95rem}
+  .sb-rozet{left:38px;top:-24px;font-size:.72rem;padding:5px 12px}
+  .sb-pencere{left:12px;right:12px;width:auto;max-width:380px;bottom:calc(100px + env(safe-area-inset-bottom))}
+}
+@media(max-width:380px){
+  .sb-hap{padding:12px 16px 12px 14px;gap:9px}
   .sb-hap svg{width:22px;height:22px}
-  .sb-hap .sb-hap-yazi b{font-size:.68rem}.sb-hap-yazi span{font-size:.9rem}
-  .sb-rozet{left:32px;top:-22px;font-size:.68rem;padding:4px 10px}
-  .sb-pencere{left:12px;right:12px;width:auto;max-width:380px;bottom:calc(90px + env(safe-area-inset-bottom))}
+  .sb-hap .sb-hap-yazi b{font-size:.68rem}.sb-hap-yazi span{font-size:.88rem}
+  .sb-rozet{left:30px;top:-22px;font-size:.68rem;padding:4px 10px}
 }
 @media(prefers-reduced-motion:reduce){.sb-hap-kutu,.sb-hap::after,.sb-hap::before,.sb-yeni,.sb-mesaj,.sb-yaziyor i{animation:none!important}.sb-hap::after,.sb-hap::before{opacity:0}.sb-pencere{transition:opacity .15s;transform:none}}
