@@ -196,7 +196,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 .sb-hap::after{box-shadow:0 0 0 3px rgba(52,199,92,.6);animation:sb-halka 3.2s ease-out infinite}
 .sb-hap::before{box-shadow:0 0 0 2px rgba(52,199,92,.38);animation:sb-halka 3.2s ease-out .45s infinite}
 @keyframes sb-halka{0%{transform:scale(1);opacity:.85}38%,100%{transform:scale(1.11);opacity:0}}
-.sb-rozet{position:absolute;top:-14px;left:40px;z-index:1;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#15803D;font-size:.74rem;font-weight:800;padding:5px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(15,23,42,.35)}
+.sb-rozet{position:absolute;top:-25px;left:40px;z-index:1;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#15803D;font-size:.74rem;font-weight:800;padding:5px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(15,23,42,.35)}
 .sb-rozet i{width:8px;height:8px;border-radius:50%;background:#22C55E}
 .sb-yeni{position:absolute;top:-9px;right:-5px;z-index:2;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#E11D2E;color:#fff;font-size:.86rem;font-weight:800;line-height:1;display:grid;place-items:center;border:2.5px solid #fff;animation:sb-pop .45s cubic-bezier(.34,1.56,.64,1)}
 .sb-yeni[hidden],.sb-pencere[hidden],.sb-mesaj[hidden],.sb-yaziyor[hidden]{display:none}
@@ -231,7 +231,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
   .sb-hap{padding:11px 18px 11px 14px;gap:10px}
   .sb-hap svg{width:22px;height:22px}
   .sb-hap .sb-hap-yazi b{font-size:.68rem}.sb-hap-yazi span{font-size:.9rem}
-  .sb-rozet{left:32px;top:-13px;font-size:.68rem;padding:4px 10px}
+  .sb-rozet{left:32px;top:-22px;font-size:.68rem;padding:4px 10px}
   .sb-pencere{left:12px;right:12px;width:auto;max-width:380px;bottom:calc(158px + env(safe-area-inset-bottom))}
 }
 @media(prefers-reduced-motion:reduce){.sb-hap-kutu,.sb-hap::after,.sb-hap::before,.sb-yeni,.sb-mesaj,.sb-yaziyor i{animation:none!important}.sb-hap::after,.sb-hap::before{opacity:0}.sb-pencere{transition:opacity .15s;transform:none}}
