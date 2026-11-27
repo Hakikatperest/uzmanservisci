@@ -167,12 +167,6 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 .alt-not{font-size:.82rem;color:#8fa8cf;border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
 @media(min-width:761px){.alt{padding-bottom:44px}}
 
-/* telefonda alta yapışık arama çubuğu */
-.yapisik{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;grid-template-columns:1.25fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(8,29,66,.96);backdrop-filter:blur(8px)}
-.yapisik a{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:800;font-size:1.05rem;padding:14px 10px;border-radius:13px}
-.y-ara{background:var(--su);color:#fff}
-.y-wa{background:var(--wa);color:#fff}
-@media(max-width:760px){.yapisik{display:grid}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 .kahraman .dugme-ara{background:#fff;color:var(--koyu);box-shadow:0 6px 0 var(--sari)}
@@ -227,11 +221,11 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 .sb-git svg{width:22px;height:22px;fill:currentColor}
 .sb-hap:focus-visible,.sb-git:focus-visible,.sb-kapat:focus-visible{outline:3px solid #9fd0ff;outline-offset:2px}
 @media(max-width:760px){
-  .sb-hap-kutu{left:12px;bottom:calc(84px + env(safe-area-inset-bottom))}
+  .sb-hap-kutu{left:12px;bottom:calc(16px + env(safe-area-inset-bottom))}
   .sb-hap{padding:11px 18px 11px 14px;gap:10px}
   .sb-hap svg{width:22px;height:22px}
   .sb-hap .sb-hap-yazi b{font-size:.68rem}.sb-hap-yazi span{font-size:.9rem}
   .sb-rozet{left:32px;top:-22px;font-size:.68rem;padding:4px 10px}
-  .sb-pencere{left:12px;right:12px;width:auto;max-width:380px;bottom:calc(158px + env(safe-area-inset-bottom))}
+  .sb-pencere{left:12px;right:12px;width:auto;max-width:380px;bottom:calc(90px + env(safe-area-inset-bottom))}
 }
 @media(prefers-reduced-motion:reduce){.sb-hap-kutu,.sb-hap::after,.sb-hap::before,.sb-yeni,.sb-mesaj,.sb-yaziyor i{animation:none!important}.sb-hap::after,.sb-hap::before{opacity:0}.sb-pencere{transition:opacity .15s;transform:none}}
