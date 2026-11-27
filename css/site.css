@@ -170,6 +170,15 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:.1
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 .kahraman .dugme-ara{background:#fff;color:var(--koyu);box-shadow:0 6px 0 var(--sari)}
+/* kahramandaki arama düğmesi: nabız + yayılan halka + çalan ahize */
+.kahraman .dugme-ara{position:relative;animation:ara-nabiz 2.6s ease-in-out infinite}
+.kahraman .dugme-ara::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:0 0 0 3px rgba(255,255,255,.75);animation:ara-halka 2.6s ease-out infinite}
+.kahraman .dugme-ara svg{transform-origin:50% 50%;animation:ara-zil 2.6s ease-in-out infinite}
+.kahraman .dugme-ara:hover{animation:none}
+@keyframes ara-nabiz{0%,30%,100%{transform:scale(1)}8%{transform:scale(1.045)}16%{transform:scale(1)}23%{transform:scale(1.03)}}
+@keyframes ara-halka{0%{transform:scale(1);opacity:.9}45%,100%{transform:scale(1.1,1.36);opacity:0}}
+@keyframes ara-zil{0%,34%,100%{transform:rotate(0)}4%,16%,28%{transform:rotate(-16deg)}10%,22%{transform:rotate(16deg)}}
+@media(prefers-reduced-motion:reduce){.kahraman .dugme-ara,.kahraman .dugme-ara::after,.kahraman .dugme-ara svg{animation:none}.kahraman .dugme-ara::after{opacity:0}}
 
 /* görsele dokununca arama */
 .kahraman-gorsel a,.kart-ara{display:block;cursor:pointer}
